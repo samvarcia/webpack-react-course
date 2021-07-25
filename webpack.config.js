@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: { loader: "html-loader" },
+        use: [{ loader: "html-loader" }],
       },
       {
         test: /\.s[ac]ss$/,
@@ -50,7 +50,7 @@ module.exports = {
     new CleanWebpackPlugin(),
   ],
   optimization: {
-    minize: true,
+    minimize: true,
     minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
   },
 };
